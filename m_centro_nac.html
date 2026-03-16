@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Mapa de centros por nacionalidad</title>
+    <meta name="description" content="Mapa de centros por nacionalidad" />
+    <meta name="theme-color" content="#2b7cff" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+            <style>
+                #map_185e3ff21aa15b435207895d84694682 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                min-height: 100dvh;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+            }
+            body {
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_185e3ff21aa15b435207895d84694682" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_185e3ff21aa15b435207895d84694682 = L.map(
+                "map_185e3ff21aa15b435207895d84694682",
+                {
+                    center: [-34.6083, -58.3712],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b04e8c5994ba87c9422b53f18abd8ddd = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_b04e8c5994ba87c9422b53f18abd8ddd.addTo(map_185e3ff21aa15b435207895d84694682);
+        
+    
+            var circle_marker_067acc15b62ae2ff0bd6d482d34499a0 = L.circleMarker(
+                [-34.61488209709091, -58.42090502218182],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 55.0, "stroke": true, "weight": 3}
+            ).addTo(map_185e3ff21aa15b435207895d84694682);
+        
+    
+        var popup_4aabeb6afc9f5f1be34618e280c470eb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d23c5ef85232a1ff60fcce6e6fc85569 = $(`<div id="html_d23c5ef85232a1ff60fcce6e6fc85569" style="width: 100.0%; height: 100.0%;">Grupo: argentinos<br>Frecuencia: 275</div>`)[0];
+                popup_4aabeb6afc9f5f1be34618e280c470eb.setContent(html_d23c5ef85232a1ff60fcce6e6fc85569);
+            
+        
+
+        circle_marker_067acc15b62ae2ff0bd6d482d34499a0.bindPopup(popup_4aabeb6afc9f5f1be34618e280c470eb)
+        ;
+
+        
+    
+    
+            var circle_marker_35ae1f08f37e4ef6602683a397a43474 = L.circleMarker(
+                [-34.619191923809524, -58.42371264761904],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_185e3ff21aa15b435207895d84694682);
+        
+    
+        var popup_9768d17a697a6661aa9bdd013cdc4671 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2ad49c060bdbf93b5357f056571ca4b1 = $(`<div id="html_2ad49c060bdbf93b5357f056571ca4b1" style="width: 100.0%; height: 100.0%;">Grupo: extranjeros<br>Frecuencia: 21</div>`)[0];
+                popup_9768d17a697a6661aa9bdd013cdc4671.setContent(html_2ad49c060bdbf93b5357f056571ca4b1);
+            
+        
+
+        circle_marker_35ae1f08f37e4ef6602683a397a43474.bindPopup(popup_9768d17a697a6661aa9bdd013cdc4671)
+        ;
+
+
+    window.addEventListener("load", function () {
+        setTimeout(function () {
+            try { map.invalidateSize(); } catch (e) {}
+        }, 200);
+    });
+</script>
+</html>

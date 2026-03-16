@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Mapas PST</title>
+  <meta name="description" content="Portal de mapas interactivos PST" />
+  <meta name="theme-color" content="#2b7cff" />
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f5f7fb;
+      color: #111827;
+    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 24px 16px 40px; }
+    h1 { margin: 0 0 8px; font-size: 1.9rem; }
+    .intro { margin: 0 0 22px; color: #4b5563; line-height: 1.5; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+    .card {
+      display: block; text-decoration: none; color: inherit; background: white;
+      border: 1px solid #dbe3f0; border-radius: 16px; padding: 16px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    }
+    .card:hover { transform: translateY(-1px); box-shadow: 0 12px 28px rgba(15, 23, 42, 0.10); }
+    .card h2 { margin: 0 0 8px; font-size: 1.05rem; }
+    .card p { margin: 0; color: #4b5563; line-height: 1.45; font-size: 0.95rem; }
+    .tag { display: inline-block; margin-top: 10px; font-size: 0.82rem; color: #1d4ed8; font-weight: 600; }
+    @media (prefers-color-scheme: dark) {
+      body { background: #0b1220; color: #e5e7eb; }
+      .intro, .card p { color: #aeb7c6; }
+      .card { background: #111827; border-color: #233046; box-shadow: none; }
+      .tag { color: #93c5fd; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Mapas PST</h1>
+    <p class="intro">Elegí el mapa que querés abrir. Esta página puede ser la portada del sitio y el destino del QR.</p>
+    <div class="grid">
+      <a class="card" href="m_puntos.html"><h2>Domicilios geocodificados</h2><p>Mapa general con puntos individuales y detalle por alumno.</p><span class="tag">Abrir mapa</span></a>
+      <a class="card" href="m_heat.html"><h2>Mapa de calor</h2><p>Visualización de concentración espacial de domicilios.</p><span class="tag">Abrir mapa</span></a>
+      <a class="card" href="m_nac.html"><h2>Nacionalidad por punto</h2><p>Domicilios individuales coloreados según nacionalidad.</p><span class="tag">Abrir mapa</span></a>
+      <a class="card" href="m_centro_nac.html"><h2>Centros por nacionalidad</h2><p>Ubicación central agregada de argentinos y extranjeros.</p><span class="tag">Abrir mapa</span></a>
+      <a class="card" href="m_ocup_puntos.html"><h2>Ocupación por punto</h2><p>Domicilios individuales clasificados por grupo ocupacional.</p><span class="tag">Abrir mapa</span></a>
+      <a class="card" href="m_ocup.html"><h2>Centros por ocupación</h2><p>Centros agregados según grupo ocupacional del tutor.</p><span class="tag">Abrir mapa</span></a>
+      <a class="card" href="m_prop_ext.html"><h2>Proporción de extranjeros</h2><p>Zonas con cantidad de alumnos, extranjeros y proporción relativa.</p><span class="tag">Abrir mapa</span></a>
+      <a class="card" href="m_zonas.html"><h2>Zonas de concentración</h2><p>Frecuencias agregadas por zonas espaciales.</p><span class="tag">Abrir mapa</span></a>
+    </div>
+  </main>
+</body>
+</html>
