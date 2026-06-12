@@ -1,54 +1,218 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Mapas PST</title>
-  <meta name="description" content="Portal de mapas interactivos PST" />
-  <meta name="theme-color" content="#2b7cff" />
-  <style>
-    :root { color-scheme: light dark; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #f5f7fb;
-      color: #111827;
-    }
-    .wrap { max-width: 980px; margin: 0 auto; padding: 24px 16px 40px; }
-    h1 { margin: 0 0 8px; font-size: 1.9rem; }
-    .intro { margin: 0 0 22px; color: #4b5563; line-height: 1.5; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
-    .card {
-      display: block; text-decoration: none; color: inherit; background: white;
-      border: 1px solid #dbe3f0; border-radius: 16px; padding: 16px;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
-    }
-    .card:hover { transform: translateY(-1px); box-shadow: 0 12px 28px rgba(15, 23, 42, 0.10); }
-    .card h2 { margin: 0 0 8px; font-size: 1.05rem; }
-    .card p { margin: 0; color: #4b5563; line-height: 1.45; font-size: 0.95rem; }
-    .tag { display: inline-block; margin-top: 10px; font-size: 0.82rem; color: #1d4ed8; font-weight: 600; }
-    @media (prefers-color-scheme: dark) {
-      body { background: #0b1220; color: #e5e7eb; }
-      .intro, .card p { color: #aeb7c6; }
-      .card { background: #111827; border-color: #233046; box-shadow: none; }
-      .tag { color: #93c5fd; }
-    }
-  </style>
+  <title>Alexis | Data Analytics, Python Automation & AI Workflows</title>
+  <meta name="description" content="Portfolio of Alexis: data analysis, Python automation, educational analytics, dashboards and AI-assisted workflows." />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="wrap">
-    <h1>Mapas PST</h1>
-    <p class="intro">Elegí el mapa que querés abrir. Esta página puede ser la portada del sitio y el destino del QR.</p>
-    <div class="grid">
-      <a class="card" href="m_puntos.html"><h2>Domicilios geocodificados</h2><p>Mapa general con puntos individuales y detalle por alumno.</p><span class="tag">Abrir mapa</span></a>
-      <a class="card" href="m_heat.html"><h2>Mapa de calor</h2><p>Visualización de concentración espacial de domicilios.</p><span class="tag">Abrir mapa</span></a>
-      <a class="card" href="m_nac.html"><h2>Nacionalidad por punto</h2><p>Domicilios individuales coloreados según nacionalidad.</p><span class="tag">Abrir mapa</span></a>
-      <a class="card" href="m_centro_nac.html"><h2>Centros por nacionalidad</h2><p>Ubicación central agregada de argentinos y extranjeros.</p><span class="tag">Abrir mapa</span></a>
-      <a class="card" href="m_ocup_puntos.html"><h2>Ocupación por punto</h2><p>Domicilios individuales clasificados por grupo ocupacional.</p><span class="tag">Abrir mapa</span></a>
-      <a class="card" href="m_ocup.html"><h2>Centros por ocupación</h2><p>Centros agregados según grupo ocupacional del tutor.</p><span class="tag">Abrir mapa</span></a>
-      <a class="card" href="m_prop_ext.html"><h2>Proporción de extranjeros</h2><p>Zonas con cantidad de alumnos, extranjeros y proporción relativa.</p><span class="tag">Abrir mapa</span></a>
-      <a class="card" href="m_zonas.html"><h2>Zonas de concentración</h2><p>Frecuencias agregadas por zonas espaciales.</p><span class="tag">Abrir mapa</span></a>
-    </div>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="#top">Alexis</a>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-content">
+        <p class="eyebrow">Data Analytics · Python Automation · AI Workflows</p>
+        <h1>I build practical data tools that turn messy information into clear, usable outputs.</h1>
+        <p class="hero-text">
+          I work at the intersection of data analysis, Python automation, educational analytics and AI-assisted workflows.
+          My focus is transforming spreadsheets, documents and institutional data into dashboards, reports and automated processes.
+        </p>
+        <div class="cta-row">
+          <a class="button primary" href="#projects">View projects</a>
+          <a class="button secondary" href="https://github.com/alexisfilosofia" target="_blank" rel="noreferrer">GitHub profile</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">What I do</p>
+        <h2>Applied data and automation services</h2>
+      </div>
+      <div class="cards three-columns">
+        <article class="card">
+          <h3>Data Cleaning & Analysis</h3>
+          <p>Cleaning, standardizing and analyzing CSV, Excel and tabular datasets using Python, Pandas and reproducible workflows.</p>
+        </article>
+        <article class="card">
+          <h3>Python Automation</h3>
+          <p>Automating repetitive data tasks, spreadsheet processing, reporting routines and file transformations.</p>
+        </article>
+        <article class="card">
+          <h3>AI-Assisted Workflows</h3>
+          <p>Designing practical workflows that combine data processing, document analysis and modern AI tools for faster decision-making.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section alt-section">
+      <div class="section-heading">
+        <p class="eyebrow">Portfolio</p>
+        <h2>Featured projects</h2>
+      </div>
+
+      <div class="project-list">
+        <article class="project-card">
+          <div>
+            <p class="project-status">In progress · Portfolio prototype</p>
+            <h3>Educational Analytics Dashboard</h3>
+            <p>
+              Interactive dashboard for educational data cleaning, reporting and visualization.
+              The app allows users to upload CSV or Excel files, standardize data, detect relevant variables,
+              calculate indicators, generate charts and export cleaned datasets.
+            </p>
+            <ul class="tag-list">
+              <li>Python</li>
+              <li>Pandas</li>
+              <li>Streamlit</li>
+              <li>Data Cleaning</li>
+              <li>Visualization</li>
+            </ul>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/alexisfilosofia/educational-analytics-dashboard" target="_blank" rel="noreferrer">Repository</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div>
+            <p class="project-status">Existing work · Spatial analytics</p>
+            <h3>Educational Spatial Mapping</h3>
+            <p>
+              A set of interactive maps for exploring geocoded educational and institutional data, including point maps,
+              heatmaps, nationality-based views and spatial concentration patterns.
+            </p>
+            <ul class="tag-list">
+              <li>Geospatial Analysis</li>
+              <li>Interactive Maps</li>
+              <li>Data Visualization</li>
+              <li>Institutional Analytics</li>
+            </ul>
+          </div>
+          <div class="project-links">
+            <a href="m_puntos.html">Point map</a>
+            <a href="m_heat.html">Heatmap</a>
+            <a href="m_zonas.html">Zones</a>
+          </div>
+        </article>
+
+        <article class="project-card muted">
+          <div>
+            <p class="project-status">Planned</p>
+            <h3>Excel & CSV Automation Workflow</h3>
+            <p>
+              A Python workflow for consolidating heterogeneous spreadsheet files, cleaning columns, detecting schema issues
+              and exporting structured reports for operational use.
+            </p>
+            <ul class="tag-list">
+              <li>Python</li>
+              <li>Excel</li>
+              <li>ETL</li>
+              <li>Automation</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card muted">
+          <div>
+            <p class="project-status">Planned</p>
+            <h3>AI Document Processing Assistant</h3>
+            <p>
+              Prototype for extracting, summarizing and organizing information from documents using AI-assisted workflows.
+            </p>
+            <ul class="tag-list">
+              <li>Python</li>
+              <li>AI Workflows</li>
+              <li>Document Processing</li>
+              <li>Automation</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Technical stack</p>
+        <h2>Skills</h2>
+      </div>
+      <div class="skill-grid">
+        <div>
+          <h3>Data</h3>
+          <p>Python, Pandas, SQL, Excel, CSV processing, data cleaning, exploratory analysis, dashboards.</p>
+        </div>
+        <div>
+          <h3>Automation</h3>
+          <p>Python scripting, ETL workflows, spreadsheet automation, reporting pipelines, API-oriented workflows.</p>
+        </div>
+        <div>
+          <h3>Visualization</h3>
+          <p>Streamlit, Matplotlib, dashboard design, educational indicators, institutional reporting.</p>
+        </div>
+        <div>
+          <h3>AI</h3>
+          <p>AI-assisted workflows, GPT-based systems, document processing concepts, prompt design for analytical tasks.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section alt-section">
+      <div class="section-heading">
+        <p class="eyebrow">Background</p>
+        <h2>Education</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>Master's Degree in Data Science</h3>
+          <p>Graduate training in data analysis, computational problem-solving, statistics, machine learning and applied analytics.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Physics</h3>
+          <p>Academic training in quantitative modeling, scientific reasoning, mathematical problem-solving and data interpretation.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Mathematics Teacher Training</h3>
+          <p>Pedagogical and mathematical training focused on logical reasoning, quantitative methods and communication of complex concepts.</p>
+        </div>
+        <div class="timeline-item">
+          <h3>Philosophy</h3>
+          <p>Training in argumentation, conceptual analysis, logic and structured reasoning.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's connect</h2>
+      </div>
+      <p>
+        I am available for freelance, part-time and project-based work in data analysis, Python automation,
+        reporting workflows and AI-assisted tools.
+      </p>
+      <div class="cta-row">
+        <a class="button primary" href="https://github.com/alexisfilosofia" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="button secondary" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </section>
   </main>
+
+  <footer class="footer">
+    <p>© 2026 Alexis · Data Analytics, Python Automation & AI Workflows</p>
+  </footer>
 </body>
 </html>
