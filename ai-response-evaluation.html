@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>AI Response Evaluation Samples | Alexis Perissé</title>
+  <meta name="description" content="AI response evaluation samples in Mathematics, Physics, and Data Science by Alexis Marcelo Perissé." />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html#top">Alexis Perissé</a>
+      <div class="nav-links">
+        <a href="index.html#projects">Portfolio</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#education">Education</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-content">
+        <p class="eyebrow">Portfolio sample · AI Evaluation · STEM Reasoning</p>
+        <h1>AI Response Evaluation Samples</h1>
+        <p class="hero-text">
+          This page presents original examples of how I evaluate AI-generated responses in Mathematics, Physics,
+          and Data Science. Each sample includes a prompt, a simulated model answer, a reference answer,
+          rubric-based scoring, error analysis, severity assessment, and an improved response.
+        </p>
+        <div class="cta-row">
+          <a class="button primary" href="#framework">Evaluation framework</a>
+          <a class="button secondary" href="index.html#projects">Back to portfolio</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="framework" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Method</p>
+        <h2>Evaluation framework</h2>
+      </div>
+      <div class="cards three-columns">
+        <article class="card">
+          <h3>Correctness</h3>
+          <p>Does the response reach the right conclusion and use valid mathematical, scientific, or statistical reasoning?</p>
+        </article>
+        <article class="card">
+          <h3>Reasoning quality</h3>
+          <p>Are the steps justified, coherent, and complete enough to support the final answer?</p>
+        </article>
+        <article class="card">
+          <h3>Instruction following</h3>
+          <p>Does the response answer the prompt, respect the requested format, and avoid unsupported claims?</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section alt-section">
+      <div class="section-heading">
+        <p class="eyebrow">Sample 1</p>
+        <h2>Mathematical reasoning: product rule</h2>
+      </div>
+      <article class="project-card">
+        <div>
+          <p class="project-status">Prompt</p>
+          <p>Find the derivative of f(x) = x² sin(x). Explain the reasoning step by step.</p>
+
+          <p class="project-status">Simulated AI-generated response</p>
+          <p>The derivative of f(x) = x² sin(x) is 2x cos(x), because the derivative of x² is 2x and the derivative of sin(x) is cos(x).</p>
+
+          <p class="project-status">Reference answer</p>
+          <p>
+            The function is a product of two functions: u(x) = x² and v(x) = sin(x). By the product rule,
+            f'(x) = u'(x)v(x) + u(x)v'(x). Since u'(x) = 2x and v'(x) = cos(x), the correct derivative is
+            f'(x) = 2x sin(x) + x² cos(x).
+          </p>
+
+          <p class="project-status">Evaluation</p>
+          <ul class="tag-list">
+            <li>Correctness: 2/5</li>
+            <li>Reasoning: 2/5</li>
+            <li>Instruction following: 3/5</li>
+            <li>Clarity: 3/5</li>
+            <li>Final score: 2/5</li>
+          </ul>
+
+          <p class="project-status">Error analysis</p>
+          <p>
+            The response identifies the derivatives of x² and sin(x), but it does not apply the product rule. It treats the derivative
+            of a product as if it could be obtained by directly combining derivative components. This is a major mathematical error
+            because it changes the final result.
+          </p>
+
+          <p class="project-status">Severity</p>
+          <p>Major error. The mistake affects the central procedure required to solve the problem and leads to an incorrect final answer.</p>
+
+          <p class="project-status">Improved answer</p>
+          <p>
+            To differentiate f(x) = x² sin(x), use the product rule. Let u = x² and v = sin(x). Then u' = 2x and v' = cos(x).
+            Therefore, f'(x) = u'v + uv' = 2x sin(x) + x² cos(x).
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Sample 2</p>
+        <h2>Physics reasoning: uniform circular motion</h2>
+      </div>
+      <article class="project-card">
+        <div>
+          <p class="project-status">Prompt</p>
+          <p>A body moves in uniform circular motion. Is the net force zero? Explain.</p>
+
+          <p class="project-status">Simulated AI-generated response</p>
+          <p>Yes. Since the speed is constant, the acceleration is zero. Therefore, by Newton's second law, the net force is zero.</p>
+
+          <p class="project-status">Reference answer</p>
+          <p>
+            The net force is not zero. In uniform circular motion, the speed is constant, but the velocity is not constant because
+            its direction changes continuously. A changing velocity means there is acceleration. This acceleration is centripetal
+            and points toward the center of the circular path. Therefore, the net force is also directed toward the center.
+          </p>
+
+          <p class="project-status">Evaluation</p>
+          <ul class="tag-list">
+            <li>Correctness: 1/5</li>
+            <li>Reasoning: 2/5</li>
+            <li>Instruction following: 4/5</li>
+            <li>Clarity: 3/5</li>
+            <li>Final score: 2/5</li>
+          </ul>
+
+          <p class="project-status">Error analysis</p>
+          <p>
+            The response confuses constant speed with constant velocity. In circular motion, velocity changes because direction changes.
+            The model correctly invokes Newton's second law, but it applies it to a false premise. The conclusion that the net force is zero
+            is physically incorrect.
+          </p>
+
+          <p class="project-status">Severity</p>
+          <p>Major conceptual error. The response fails on the central physics concept required by the prompt.</p>
+
+          <p class="project-status">Improved answer</p>
+          <p>
+            No. The net force is not zero. Even though the speed is constant, the velocity changes direction throughout the motion.
+            This produces centripetal acceleration toward the center of the circle. By Newton's second law, a nonzero acceleration
+            requires a nonzero net force in the same direction.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section alt-section">
+      <div class="section-heading">
+        <p class="eyebrow">Sample 3</p>
+        <h2>Data Science reasoning: accuracy and imbalanced datasets</h2>
+      </div>
+      <article class="project-card">
+        <div>
+          <p class="project-status">Prompt</p>
+          <p>A classification model has 95% accuracy on an imbalanced dataset. Is it necessarily a good model? Explain.</p>
+
+          <p class="project-status">Simulated AI-generated response</p>
+          <p>Yes. A 95% accuracy score means the model is correct almost all the time, so it is an excellent classifier.</p>
+
+          <p class="project-status">Reference answer</p>
+          <p>
+            Not necessarily. Accuracy can be misleading on imbalanced datasets. If 95% of the observations belong to one class,
+            a model could reach 95% accuracy by always predicting the majority class while completely failing to identify the minority class.
+            The evaluation should include the class distribution, confusion matrix, precision, recall, F1-score, and a comparison with a baseline model.
+          </p>
+
+          <p class="project-status">Evaluation</p>
+          <ul class="tag-list">
+            <li>Correctness: 2/5</li>
+            <li>Reasoning: 2/5</li>
+            <li>Instruction following: 3/5</li>
+            <li>Clarity: 4/5</li>
+            <li>Final score: 2/5</li>
+          </ul>
+
+          <p class="project-status">Error analysis</p>
+          <p>
+            The response overinterprets accuracy and ignores the dataset imbalance mentioned in the prompt. It does not consider baseline performance
+            or class-specific metrics. The answer is superficially clear but statistically incomplete and potentially misleading.
+          </p>
+
+          <p class="project-status">Severity</p>
+          <p>Moderate to major error. The response may lead to an incorrect evaluation of model performance in a common real-world scenario.</p>
+
+          <p class="project-status">Improved answer</p>
+          <p>
+            A 95% accuracy score does not necessarily mean the model is good. On an imbalanced dataset, accuracy may hide poor performance
+            on the minority class. The model should be evaluated using a confusion matrix, precision, recall, F1-score, and comparison with
+            a simple baseline. If the model only predicts the majority class, it may be ineffective despite its high accuracy.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section contact-section">
+      <div class="section-heading">
+        <p class="eyebrow">Professional positioning</p>
+        <h2>Why this matters</h2>
+      </div>
+      <p>
+        AI systems often produce answers that sound plausible but contain mathematical, scientific, or statistical errors.
+        Reliable evaluation requires domain knowledge, attention to reasoning, and the ability to distinguish minor omissions
+        from errors that invalidate a conclusion. These samples illustrate my approach to auditing AI-generated STEM content.
+      </p>
+      <div class="cta-row">
+        <a class="button primary" href="index.html#contact">Contact</a>
+        <a class="button secondary" href="index.html#projects">Back to projects</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Alexis Perissé · AI Response Evaluation Samples</p>
+  </footer>
+</body>
+</html>
