@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Physics and Mathematics Modeling with Python | Alexis Perissé</title>
+  <meta name="description" content="Python-based physics, mathematics, and data science modeling samples by Alexis Marcelo Perissé." />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html#top">Alexis Perissé</a>
+      <div class="nav-links">
+        <a href="index.html#projects">Portfolio</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#education">Education</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-content">
+        <p class="eyebrow">Portfolio sample · Physics · Mathematics · Python</p>
+        <h1>Physics and Mathematics Modeling with Python</h1>
+        <p class="hero-text">
+          This page presents compact examples of quantitative modeling, scientific reasoning, and Python-based validation.
+          The goal is to show how physical and mathematical problems can be translated into assumptions, equations,
+          computational workflows, and interpretable results.
+        </p>
+        <div class="cta-row">
+          <a class="button primary" href="#modeling-framework">Modeling framework</a>
+          <a class="button secondary" href="index.html#projects">Back to portfolio</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="modeling-framework" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Method</p>
+        <h2>How I structure quantitative validation</h2>
+      </div>
+      <div class="cards three-columns">
+        <article class="card">
+          <h3>Assumptions</h3>
+          <p>Define the physical or mathematical assumptions before computing results.</p>
+        </article>
+        <article class="card">
+          <h3>Equations</h3>
+          <p>Translate the problem into explicit formulas, variables, and units.</p>
+        </article>
+        <article class="card">
+          <h3>Validation</h3>
+          <p>Use Python to calculate, compare, visualize, and interpret the result.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section alt-section">
+      <div class="section-heading">
+        <p class="eyebrow">Sample 1</p>
+        <h2>Projectile motion</h2>
+      </div>
+      <article class="project-card">
+        <div>
+          <p class="project-status">Problem</p>
+          <p>
+            A projectile is launched from ground level with initial speed v₀ = 20 m/s at an angle of 35° above the horizontal.
+            Neglect air resistance and use g = 9.81 m/s². Estimate the time of flight, maximum height, and horizontal range.
+          </p>
+
+          <p class="project-status">Model assumptions</p>
+          <p>
+            The projectile is treated as a point mass. Air resistance is neglected. Gravity is constant and acts vertically downward.
+            Horizontal and vertical motions are modeled independently.
+          </p>
+
+          <p class="project-status">Equations</p>
+          <p>
+            vₓ = v₀ cos(θ), vᵧ = v₀ sin(θ). The time of flight is T = 2vᵧ/g. The maximum height is H = vᵧ²/(2g).
+            The horizontal range is R = vₓT.
+          </p>
+
+          <p class="project-status">Python-style validation</p>
+          <pre><code>import math
+
+v0 = 20
+angle = math.radians(35)
+g = 9.81
+
+vx = v0 * math.cos(angle)
+vy = v0 * math.sin(angle)
+T = 2 * vy / g
+H = vy**2 / (2 * g)
+R = vx * T
+
+print(T, H, R)</code></pre>
+
+          <p class="project-status">Expected interpretation</p>
+          <p>
+            The calculation gives approximately T ≈ 2.34 s, H ≈ 6.71 m, and R ≈ 38.3 m. The result is consistent with the standard
+            parabolic trajectory model: increasing the vertical component increases time and height, while the horizontal component controls range.
+          </p>
+
+          <ul class="tag-list">
+            <li>Physics</li>
+            <li>Kinematics</li>
+            <li>Python</li>
+            <li>Numerical Validation</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Sample 2</p>
+        <h2>Exponential decay model</h2>
+      </div>
+      <article class="project-card">
+        <div>
+          <p class="project-status">Problem</p>
+          <p>
+            A quantity decreases by 18% each hour. If the initial value is 120 units, estimate the amount remaining after 6 hours.
+            Interpret the model and its limitations.
+          </p>
+
+          <p class="project-status">Model assumptions</p>
+          <p>
+            The rate of proportional decrease is constant over time. The process is discrete by hour, so the quantity is multiplied by 0.82
+            after each one-hour interval.
+          </p>
+
+          <p class="project-status">Equation</p>
+          <p>
+            Q(t) = Q₀(1 - r)^t, where Q₀ = 120, r = 0.18, and t is measured in hours. For t = 6, Q(6) = 120(0.82)^6.
+          </p>
+
+          <p class="project-status">Python-style validation</p>
+          <pre><code>Q0 = 120
+r = 0.18
+t = 6
+
+Q = Q0 * (1 - r)**t
+print(Q)</code></pre>
+
+          <p class="project-status">Expected interpretation</p>
+          <p>
+            The model gives approximately 36.5 units after 6 hours. This does not mean every real process will follow the same curve;
+            the model depends on the assumption that the proportional rate remains constant throughout the interval.
+          </p>
+
+          <ul class="tag-list">
+            <li>Mathematical Modeling</li>
+            <li>Exponential Decay</li>
+            <li>Python</li>
+            <li>Interpretation</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="section alt-section">
+      <div class="section-heading">
+        <p class="eyebrow">Sample 3</p>
+        <h2>Linear regression and residual reasoning</h2>
+      </div>
+      <article class="project-card">
+        <div>
+          <p class="project-status">Problem</p>
+          <p>
+            A small dataset suggests a positive relationship between study time and exam score. Fit a simple linear regression model and explain
+            why a high correlation should not be interpreted automatically as causation.
+          </p>
+
+          <p class="project-status">Model assumptions</p>
+          <p>
+            The relationship is approximated as linear over the observed range. The model summarizes association, not causal structure.
+            Other variables, such as prior knowledge, attendance, socioeconomic context, or test difficulty, may also affect performance.
+          </p>
+
+          <p class="project-status">Python-style workflow</p>
+          <pre><code>import numpy as np
+from sklearn.linear_model import LinearRegression
+
+hours = np.array([1, 2, 3, 4, 5]).reshape(-1, 1)
+scores = np.array([52, 58, 65, 71, 78])
+
+model = LinearRegression()
+model.fit(hours, scores)
+
+slope = model.coef_[0]
+intercept = model.intercept_
+predicted = model.predict(hours)
+residuals = scores - predicted
+
+print(slope, intercept, residuals)</code></pre>
+
+          <p class="project-status">Expected interpretation</p>
+          <p>
+            The slope estimates the average increase in predicted score per additional hour of study within the observed range.
+            Residuals show how far each observation is from the fitted line. Even if the fitted relationship is strong, regression alone
+            does not prove that study time caused the score increase.
+          </p>
+
+          <p class="project-status">Why this matters for AI evaluation</p>
+          <p>
+            AI-generated explanations often confuse statistical association with causal inference. A rigorous evaluator must check whether
+            the model distinguishes prediction, correlation, and causation before accepting the conclusion.
+          </p>
+
+          <ul class="tag-list">
+            <li>Data Science</li>
+            <li>Regression</li>
+            <li>Residuals</li>
+            <li>Causal Reasoning</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="section contact-section">
+      <div class="section-heading">
+        <p class="eyebrow">Professional positioning</p>
+        <h2>From solution building to model evaluation</h2>
+      </div>
+      <p>
+        These examples show the type of reasoning required to evaluate AI-generated STEM content. A strong evaluator must be able
+        not only to identify whether an answer is correct, but also to reconstruct the correct method, validate the computation,
+        and explain the limits of the model being used.
+      </p>
+      <div class="cta-row">
+        <a class="button primary" href="ai-response-evaluation.html">AI evaluation samples</a>
+        <a class="button secondary" href="index.html#projects">Back to projects</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Alexis Perissé · Physics and Mathematics Modeling with Python</p>
+  </footer>
+</body>
+</html>
