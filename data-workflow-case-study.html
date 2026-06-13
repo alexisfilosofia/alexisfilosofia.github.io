@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Data Workflow Case Study | Alexis Perisse</title>
-  <meta name="description" content="Data workflow portfolio case study by Alexis Marcelo Perisse." />
+  <meta name="description" content="Data workflow portfolio case study by Alexis Marcelo Perisse: spreadsheet cleaning, statistical summaries, geospatial visualization, and reproducible reporting with Python." />
   <meta name="theme-color" content="#0f172a" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -26,12 +26,13 @@
         <p class="eyebrow">Portfolio case study · Data Science · Python</p>
         <h1>Data Workflow Case Study</h1>
         <p class="hero-text">
-          A compact portfolio case study focused on data cleaning, statistical analysis, visualization, geospatial outputs,
-          and reproducible reporting with Python.
+          A compact portfolio case study focused on moving from heterogeneous spreadsheet inputs to clean analytical tables,
+          statistical summaries, visual outputs, geospatial maps, and reproducible reporting with Python.
         </p>
         <div class="cta-row">
           <a class="button primary" href="#workflow">View workflow</a>
-          <a class="button secondary" href="#outputs">Analytical outputs</a>
+          <a class="button secondary" href="#outputs">Analytical components</a>
+          <a class="button secondary" href="#examples">Implementation examples</a>
           <a class="button secondary" href="index.html#projects">Back to portfolio</a>
         </div>
       </div>
@@ -44,16 +45,16 @@
       </div>
       <div class="cards three-columns">
         <article class="card">
-          <h3>Data preparation</h3>
-          <p>Reading spreadsheets, harmonizing columns, validating formats, and preparing clean tables.</p>
+          <h3>1. Data preparation</h3>
+          <p>Read multiple spreadsheet files, preserve file provenance, harmonize column names, validate formats, and build a consolidated table.</p>
         </article>
         <article class="card">
-          <h3>Analysis</h3>
-          <p>Producing summary statistics, grouped indicators, comparative views, and exploratory charts.</p>
+          <h3>2. Analysis</h3>
+          <p>Produce descriptive statistics, grouped indicators, comparative views, pivot tables, distributions, and exploratory visualizations.</p>
         </article>
         <article class="card">
-          <h3>Reporting</h3>
-          <p>Creating visual summaries, maps, and readable outputs for interpretation and communication.</p>
+          <h3>3. Reporting</h3>
+          <p>Create readable summaries, maps, charts, and exportable outputs that can support interpretation and communication.</p>
         </article>
       </div>
     </section>
@@ -66,40 +67,88 @@
       <div class="project-list">
         <article class="project-card">
           <div>
-            <p class="project-status">Component 1</p>
-            <h3>Cleaning pipeline</h3>
-            <p>A reproducible process for reading spreadsheet files, standardizing fields, and preparing tables for analysis.</p>
+            <p class="project-status">Component 1 · Cleaning pipeline</p>
+            <h3>From raw spreadsheets to a consolidated dataset</h3>
+            <p>
+              The workflow reads several yearly spreadsheet files and converts them into one consistent analytical table.
+              It normalizes column names, removes irrelevant unnamed fields, maps heterogeneous headings to canonical names,
+              reconstructs dates when needed, converts numeric variables, and keeps source-file metadata for traceability.
+            </p>
+            <p>
+              The key idea is not only to clean the data, but to make every transformation auditable. For that reason,
+              the workflow also generates mapping tables that document how each original column was interpreted.
+            </p>
             <ul class="tag-list">
               <li>Python</li>
               <li>pandas</li>
               <li>Excel</li>
-              <li>Data Cleaning</li>
+              <li>Schema Mapping</li>
+              <li>Traceability</li>
             </ul>
           </div>
         </article>
+
         <article class="project-card">
           <div>
-            <p class="project-status">Component 2</p>
-            <h3>Statistical summaries</h3>
-            <p>Frequency tables, grouped distributions, histograms, boxplots, and comparative indicators.</p>
+            <p class="project-status">Component 2 · Category normalization</p>
+            <h3>Making inconsistent labels comparable</h3>
+            <p>
+              Historical or institutional records often use different labels for the same category. The workflow standardizes
+              variants into a controlled set of canonical categories, making it possible to compare results across files and time periods.
+            </p>
+            <p>
+              This step is essential before producing grouped tables, heatmaps, bar charts, or time-based summaries, because small differences
+              in spelling or formatting can otherwise create false categories.
+            </p>
+            <ul class="tag-list">
+              <li>Text Normalization</li>
+              <li>Canonical Categories</li>
+              <li>Grouped Analysis</li>
+              <li>Quality Control</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div>
+            <p class="project-status">Component 3 · Statistical summaries</p>
+            <h3>Descriptive statistics and exploratory indicators</h3>
+            <p>
+              The analysis produces frequency tables, annual summaries, grouped distributions, descriptive statistics, histograms,
+              boxplots, heatmaps, and stacked bar charts. These outputs help detect concentration patterns, dispersion,
+              outliers, and changes across groups or periods.
+            </p>
+            <p>
+              The goal is to move from isolated records to interpretable aggregate patterns while keeping the analysis transparent
+              and reproducible.
+            </p>
             <ul class="tag-list">
               <li>Statistics</li>
               <li>Indicators</li>
               <li>Histograms</li>
               <li>Boxplots</li>
+              <li>Heatmaps</li>
             </ul>
           </div>
         </article>
+
         <article class="project-card">
           <div>
-            <p class="project-status">Component 3</p>
-            <h3>Geospatial visualization</h3>
-            <p>Map-based outputs for exploring spatial patterns and presenting results visually.</p>
+            <p class="project-status">Component 4 · Geospatial visualization</p>
+            <h3>Map-based outputs for spatial interpretation</h3>
+            <p>
+              The geospatial part of the workflow standardizes location fields, geocodes usable entries, creates map layers,
+              and exports interactive HTML visualizations. The public version links only to visual map outputs and avoids publishing raw source tables.
+            </p>
+            <p>
+              This component is useful for identifying spatial concentration, distance patterns, and territorial structure in a way that
+              is easier to interpret than a spreadsheet alone.
+            </p>
             <ul class="tag-list">
               <li>Folium</li>
-              <li>Maps</li>
               <li>Geocoding</li>
-              <li>Visualization</li>
+              <li>Interactive Maps</li>
+              <li>Spatial Analysis</li>
             </ul>
           </div>
           <div class="project-links">
@@ -111,6 +160,86 @@
       </div>
     </section>
 
+    <section id="examples" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Implementation examples</p>
+        <h2>Representative Python logic</h2>
+      </div>
+
+      <article class="project-card">
+        <div>
+          <p class="project-status">Example 1 · Column normalization</p>
+          <h3>Standardizing field names</h3>
+          <p>
+            A reusable normalization function converts source column names into lowercase, accent-free, underscore-separated identifiers.
+            This makes it easier to merge files that use different labels for the same field.
+          </p>
+          <pre><code>def normalize_column(name):
+    name = str(name).strip().lower()
+    name = remove_accents(name)
+    name = replace_non_alphanumeric_with_underscore(name)
+    return collapse_repeated_underscores(name)</code></pre>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div>
+          <p class="project-status">Example 2 · Consolidation</p>
+          <h3>Combining multiple files</h3>
+          <p>
+            Each file is read, cleaned, tagged with its source, and appended to a list. The final dataset is created by concatenating
+            all standardized tables.
+          </p>
+          <pre><code>tables = []
+
+for file in spreadsheet_files:
+    df = read_spreadsheet(file)
+    df = standardize_columns(df)
+    df = add_source_metadata(df, file)
+    tables.append(df)
+
+consolidated = concatenate(tables)</code></pre>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div>
+          <p class="project-status">Example 3 · Analytical table</p>
+          <h3>Grouped summaries</h3>
+          <p>
+            Once the data is clean, grouped summaries can be generated by combining time, category, and quantitative variables.
+          </p>
+          <pre><code>summary = (
+    consolidated
+    .groupby(["period", "category"])
+    .size()
+    .reset_index(name="frequency")
+)</code></pre>
+        </div>
+      </article>
+    </section>
+
+    <section class="section alt-section">
+      <div class="section-heading">
+        <p class="eyebrow">Responsible publication</p>
+        <h2>Public-facing version</h2>
+      </div>
+      <article class="project-card">
+        <div>
+          <p>
+            This public version presents the analytical method, aggregate logic, and selected visual outputs. It does not publish
+            raw records or individualized source material. The focus is on reproducibility, interpretation, and responsible communication.
+          </p>
+          <ul class="tag-list">
+            <li>Responsible Publication</li>
+            <li>Aggregate Reporting</li>
+            <li>Reproducibility</li>
+            <li>Public Communication</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
     <section class="section contact-section">
       <div class="section-heading">
         <p class="eyebrow">Professional positioning</p>
@@ -118,7 +247,8 @@
       </div>
       <p>
         This project shows the ability to move from messy tabular inputs to documented analysis, visual outputs,
-        and clear interpretation using reproducible Python workflows.
+        and clear interpretation using reproducible Python workflows. It complements the AI evaluation and STEM modeling samples
+        by showing practical data preparation, validation, and communication skills.
       </p>
       <div class="cta-row">
         <a class="button primary" href="ai-response-evaluation.html">AI evaluation samples</a>
