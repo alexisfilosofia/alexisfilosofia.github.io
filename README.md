@@ -27,30 +27,26 @@ They may contain sensitive institutional and student-level information such as n
 
 - sanitized notebooks;
 - aggregate outputs;
-- selected screenshots;
-- methodological documentation.
+- methodological documentation;
+- a screenshot guide for adding public-safe visual outputs.
 
 No raw student-level dataset is published in this repository.
 
 ## Selected outputs
 
+The project documents the following analytical outputs:
+
 ### 1. Annual enrollment volume
 
-![Annual enrollment by year](assets/screenshots/01_total_enrollment_by_year.png)
-
-This chart summarizes the total number of student records by registry year.
+Annual count of student records by registry year. This output summarizes historical enrollment volume and supports a first reading of institutional growth or variation.
 
 ### 2. Age-range composition by year
 
-![Age range distribution by year](assets/screenshots/02_age_range_distribution_by_year.png)
-
-This stacked bar chart shows how the age composition of the enrollment records changes across years.
+Stacked age-range analysis by registry year. This output shows changes in the age composition of the enrollment records.
 
 ### 3. Age distribution and outlier detection
 
-![Age boxplot by year](assets/screenshots/03_age_boxplot_by_year.png)
-
-This boxplot allows comparison of median age, dispersion and outliers by year.
+Boxplot-based analysis of age by year. This output allows comparison of median age, dispersion and outlier cases.
 
 ### 4. Entry course frequency by year
 
@@ -63,15 +59,24 @@ This output supports the analysis of how student entry patterns vary across year
 
 ### 5. Distance-to-school distribution
 
-![Distance to school distribution](assets/screenshots/05_distance_to_school_distribution.png)
-
-This histogram shows the approximate distance between student residences and the school, using aggregated geospatial calculations.
+Aggregate histogram of approximate distances between student residences and the institution. This output is useful for studying accessibility and territorial reach without publishing addresses.
 
 ### 6. Guardian nationality distribution
 
-![Guardian nationality distribution](assets/screenshots/06_guardian_nationality_distribution.png)
+Aggregate frequency distribution of guardian nationality. This output is included only at a summarized level.
 
-This chart summarizes guardian nationality frequencies at an aggregate level.
+## Screenshot policy
+
+Public screenshots should be added only after review. Do not upload images showing:
+
+- student names;
+- exact addresses linked to individuals;
+- Google Drive paths;
+- personal folders;
+- row-level sensitive records;
+- exact point maps crossed with sensitive demographic categories.
+
+See [`assets/screenshots/README.md`](assets/screenshots/README.md) for the screenshot guide.
 
 ## Repository structure
 
