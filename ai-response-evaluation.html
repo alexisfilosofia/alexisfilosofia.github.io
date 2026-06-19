@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>AI Response Evaluation Samples | Alexis Perissé</title>
-  <meta name="description" content="AI response evaluation samples in Mathematics, Physics, and Data Science by Alexis Marcelo Perissé." />
-  <meta name="theme-color" content="#0f172a" />
+  <title>AI Response Evaluation for STEM Reasoning | Alexis Perissé</title>
+  <meta name="description" content="Professional AI response evaluation samples for STEM reasoning, technical accuracy, instruction following, clarity, and rubric-based review by Alexis Marcelo Perissé." />
+  <meta name="theme-color" content="#101923" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -13,9 +13,9 @@
     <nav class="nav">
       <a class="logo" href="index.html#top">Alexis Perissé</a>
       <div class="nav-links">
-        <a href="index.html#projects">Portfolio</a>
-        <a href="index.html#skills">Skills</a>
-        <a href="index.html#education">Education</a>
+        <a href="index.html#focus">Focus</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#projects">Projects</a>
         <a href="index.html#contact">Contact</a>
       </div>
     </nav>
@@ -24,205 +24,218 @@
   <main id="top">
     <section class="hero section">
       <div class="hero-content">
-        <p class="eyebrow">Portfolio sample · AI Evaluation · STEM Reasoning</p>
-        <h1>AI Response Evaluation Samples</h1>
+        <p class="eyebrow">AI Evaluation · STEM Reasoning · Rubric-Based Review</p>
+        <h1>AI Response Evaluation for STEM Reasoning</h1>
         <p class="hero-text">
-          This page presents original examples of how I evaluate AI-generated responses in Mathematics, Physics,
-          and Data Science. Each sample includes a prompt, a simulated model answer, a reference answer,
-          rubric-based scoring, error analysis, severity assessment, and an improved response.
+          Examples of how I evaluate AI-generated answers for accuracy, reasoning quality, instruction following,
+          clarity, and technical rigor.
         </p>
         <div class="cta-row">
-          <a class="button primary" href="#framework">Evaluation framework</a>
-          <a class="button secondary" href="index.html#projects">Back to portfolio</a>
+          <a class="button primary" href="index.html">Back to portfolio</a>
+          <a class="button secondary" href="https://alexisfilosofia.github.io/school-enrollment-geospatial-analysis/" target="_blank" rel="noreferrer">View featured project</a>
         </div>
       </div>
     </section>
 
     <section id="framework" class="section">
       <div class="section-heading">
-        <p class="eyebrow">Method</p>
-        <h2>Evaluation framework</h2>
+        <p class="eyebrow">Evaluation framework</p>
+        <h2>How I review technical AI responses</h2>
+        <p>The goal is not only to check whether the final answer looks right, but to inspect the reasoning path that produced it.</p>
       </div>
       <div class="cards three-columns">
         <article class="card">
-          <h3>Correctness</h3>
-          <p>Does the response reach the right conclusion and use valid mathematical, scientific, or statistical reasoning?</p>
+          <h3>Accuracy</h3>
+          <p>Checks whether the final answer and intermediate claims are factually and mathematically correct.</p>
         </article>
         <article class="card">
           <h3>Reasoning quality</h3>
-          <p>Are the steps justified, coherent, and complete enough to support the final answer?</p>
+          <p>Assesses whether the solution follows a valid logical path, states assumptions clearly, and avoids unsupported jumps.</p>
         </article>
         <article class="card">
           <h3>Instruction following</h3>
-          <p>Does the response answer the prompt, respect the requested format, and avoid unsupported claims?</p>
+          <p>Checks whether the response answers the actual prompt, respects constraints, and uses the requested format.</p>
+        </article>
+        <article class="card">
+          <h3>Clarity and usefulness</h3>
+          <p>Evaluates whether the explanation is understandable, complete, and useful for the intended user.</p>
         </article>
       </div>
     </section>
 
-    <section class="section alt-section">
+    <section id="samples" class="section alt-section">
       <div class="section-heading">
-        <p class="eyebrow">Sample 1</p>
-        <h2>Mathematical reasoning: product rule</h2>
+        <p class="eyebrow">Sample evaluations</p>
+        <h2>Concrete examples of rubric-based review</h2>
+        <p>Each sample shows the prompt, a simulated model answer, the issues found, severity, a corrected answer, and the evaluation rubric.</p>
       </div>
-      <article class="project-card">
-        <div>
-          <p class="project-status">Prompt</p>
-          <p>Find the derivative of f(x) = x² sin(x). Explain the reasoning step by step.</p>
 
-          <p class="project-status">Simulated AI-generated response</p>
-          <p>The derivative of f(x) = x² sin(x) is 2x cos(x), because the derivative of x² is 2x and the derivative of sin(x) is cos(x).</p>
+      <div class="project-list">
+        <article class="project-card">
+          <div>
+            <p class="project-status">Example 1 · Mathematics reasoning evaluation</p>
+            <h3>Combinatorics: handshakes</h3>
 
-          <p class="project-status">Reference answer</p>
-          <p>
-            The function is a product of two functions: u(x) = x² and v(x) = sin(x). By the product rule,
-            f'(x) = u'(x)v(x) + u(x)v'(x). Since u'(x) = 2x and v'(x) = cos(x), the correct derivative is
-            f'(x) = 2x sin(x) + x² cos(x).
-          </p>
+            <p class="project-status">Prompt</p>
+            <p>In a room with 12 people, each person shakes hands with every other person exactly once. How many handshakes occur?</p>
 
-          <p class="project-status">Evaluation</p>
-          <ul class="tag-list">
-            <li>Correctness: 2/5</li>
-            <li>Reasoning: 2/5</li>
-            <li>Instruction following: 3/5</li>
-            <li>Clarity: 3/5</li>
-            <li>Final score: 2/5</li>
-          </ul>
+            <p class="project-status">Model answer</p>
+            <p>There are 12 people and each shakes hands with 12 others, so 12 × 12 = 144 handshakes.</p>
 
-          <p class="project-status">Error analysis</p>
-          <p>
-            The response identifies the derivatives of x² and sin(x), but it does not apply the product rule. It treats the derivative
-            of a product as if it could be obtained by directly combining derivative components. This is a major mathematical error
-            because it changes the final result.
-          </p>
+            <p class="project-status">Issues found</p>
+            <p>The model double-counts each handshake and also counts people shaking hands with themselves.</p>
 
-          <p class="project-status">Severity</p>
-          <p>Major error. The mistake affects the central procedure required to solve the problem and leads to an incorrect final answer.</p>
+            <p class="project-status">Severity</p>
+            <p>Major reasoning error.</p>
 
-          <p class="project-status">Improved answer</p>
-          <p>
-            To differentiate f(x) = x² sin(x), use the product rule. Let u = x² and v = sin(x). Then u' = 2x and v' = cos(x).
-            Therefore, f'(x) = u'v + uv' = 2x sin(x) + x² cos(x).
-          </p>
-        </div>
-      </article>
+            <p class="project-status">Corrected answer</p>
+            <p>Each handshake is a pair of distinct people, so the number is C(12, 2) = 12 × 11 / 2 = 66.</p>
+
+            <p class="project-status">Evaluation rubric</p>
+            <ul class="tag-list">
+              <li>Accuracy: incorrect</li>
+              <li>Reasoning: flawed double counting</li>
+              <li>Instruction following: answers the prompt with invalid method</li>
+              <li>Clarity: clear but mathematically wrong</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div>
+            <p class="project-status">Example 2 · Physics explanation evaluation</p>
+            <h3>Projectile motion: horizontal launch</h3>
+
+            <p class="project-status">Prompt</p>
+            <p>A ball is launched horizontally from a height of 20 m with an initial horizontal speed of 10 m/s. Ignoring air resistance, how long does it take to hit the ground?</p>
+
+            <p class="project-status">Model answer</p>
+            <p>The time depends on the horizontal speed, so t = d / v. Since the height is 20 m and the speed is 10 m/s, the ball hits the ground in 2 seconds.</p>
+
+            <p class="project-status">Issues found</p>
+            <p>The model incorrectly uses horizontal speed to compute vertical fall time. Vertical motion is independent of horizontal motion when air resistance is ignored.</p>
+
+            <p class="project-status">Severity</p>
+            <p>Major physics reasoning error.</p>
+
+            <p class="project-status">Corrected answer</p>
+            <p>The vertical motion satisfies h = 1/2 g t². With h = 20 m and g ≈ 9.8 m/s², t = sqrt(2h/g) = sqrt(40/9.8) ≈ 2.02 s.</p>
+
+            <p class="project-status">Evaluation rubric</p>
+            <ul class="tag-list">
+              <li>Accuracy: numerically close by coincidence</li>
+              <li>Reasoning: incorrect physical model</li>
+              <li>Instruction following: answers the question</li>
+              <li>Clarity: clear but conceptually misleading</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div>
+            <p class="project-status">Example 3 · Data Science / statistics evaluation</p>
+            <h3>Correlation and causation</h3>
+
+            <p class="project-status">Prompt</p>
+            <p>A dataset shows a strong positive correlation between hours studied and exam scores. Can we conclude that studying more causes higher scores?</p>
+
+            <p class="project-status">Model answer</p>
+            <p>Yes. Since the correlation is strong and positive, studying more definitely causes higher exam scores.</p>
+
+            <p class="project-status">Issues found</p>
+            <p>The model confuses correlation with causation and ignores potential confounders, study quality, prior knowledge, selection effects, and experimental design.</p>
+
+            <p class="project-status">Severity</p>
+            <p>Major conceptual error.</p>
+
+            <p class="project-status">Corrected answer</p>
+            <p>
+              A strong positive correlation suggests an association, but it does not by itself prove causation. To support a causal claim,
+              one would need an appropriate research design, such as randomized intervention, longitudinal controls, or causal modeling
+              with justified assumptions.
+            </p>
+
+            <p class="project-status">Evaluation rubric</p>
+            <ul class="tag-list">
+              <li>Accuracy: incorrect causal conclusion</li>
+              <li>Reasoning: overgeneralizes from correlation</li>
+              <li>Instruction following: answers but overstates certainty</li>
+              <li>Clarity: clear wording with misleading inference</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div>
+            <p class="project-status">Example 4 · Instruction-following evaluation</p>
+            <h3>Constrained output format</h3>
+
+            <p class="project-status">Prompt</p>
+            <p>Summarize the following paragraph in exactly three bullet points and do not use more than 12 words per bullet.</p>
+
+            <p class="project-status">Model answer</p>
+            <p>A paragraph-style response with four sentences and no bullet points.</p>
+
+            <p class="project-status">Issues found</p>
+            <p>The model fails the requested format, number of bullets, and length constraint.</p>
+
+            <p class="project-status">Severity</p>
+            <p>Moderate to major instruction-following failure.</p>
+
+            <p class="project-status">Corrected answer</p>
+            <p>Provide exactly three short bullets, each under 12 words.</p>
+
+            <p class="project-status">Evaluation rubric</p>
+            <ul class="tag-list">
+              <li>Accuracy: depends on content</li>
+              <li>Reasoning: not central</li>
+              <li>Instruction following: failed</li>
+              <li>Clarity: understandable but violates format</li>
+            </ul>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <section class="section">
+    <section id="demonstrates" class="section">
       <div class="section-heading">
-        <p class="eyebrow">Sample 2</p>
-        <h2>Physics reasoning: uniform circular motion</h2>
+        <p class="eyebrow">What this demonstrates</p>
+        <h2>Evaluation beyond final-answer checking</h2>
       </div>
-      <article class="project-card">
-        <div>
-          <p class="project-status">Prompt</p>
-          <p>A body moves in uniform circular motion. Is the net force zero? Explain.</p>
-
-          <p class="project-status">Simulated AI-generated response</p>
-          <p>Yes. Since the speed is constant, the acceleration is zero. Therefore, by Newton's second law, the net force is zero.</p>
-
-          <p class="project-status">Reference answer</p>
-          <p>
-            The net force is not zero. In uniform circular motion, the speed is constant, but the velocity is not constant because
-            its direction changes continuously. A changing velocity means there is acceleration. This acceleration is centripetal
-            and points toward the center of the circular path. Therefore, the net force is also directed toward the center.
-          </p>
-
-          <p class="project-status">Evaluation</p>
-          <ul class="tag-list">
-            <li>Correctness: 1/5</li>
-            <li>Reasoning: 2/5</li>
-            <li>Instruction following: 4/5</li>
-            <li>Clarity: 3/5</li>
-            <li>Final score: 2/5</li>
-          </ul>
-
-          <p class="project-status">Error analysis</p>
-          <p>
-            The response confuses constant speed with constant velocity. In circular motion, velocity changes because direction changes.
-            The model correctly invokes Newton's second law, but it applies it to a false premise. The conclusion that the net force is zero
-            is physically incorrect.
-          </p>
-
-          <p class="project-status">Severity</p>
-          <p>Major conceptual error. The response fails on the central physics concept required by the prompt.</p>
-
-          <p class="project-status">Improved answer</p>
-          <p>
-            No. The net force is not zero. Even though the speed is constant, the velocity changes direction throughout the motion.
-            This produces centripetal acceleration toward the center of the circle. By Newton's second law, a nonzero acceleration
-            requires a nonzero net force in the same direction.
-          </p>
-        </div>
-      </article>
+      <div class="cards three-columns">
+        <article class="card">
+          <h3>Reasoning and assumptions</h3>
+          <p>I do not only check final answers. I inspect reasoning paths, hidden assumptions, constraints, and whether the explanation actually supports the conclusion.</p>
+        </article>
+        <article class="card">
+          <h3>Structured technical review</h3>
+          <p>I can evaluate STEM, data, and educational content using structured rubrics, issue severity, corrected responses, and user-facing clarity checks.</p>
+        </article>
+      </div>
     </section>
 
-    <section class="section alt-section">
+    <section class="section alt-section contact-section">
       <div class="section-heading">
-        <p class="eyebrow">Sample 3</p>
-        <h2>Data Science reasoning: accuracy and imbalanced datasets</h2>
+        <p class="eyebrow">Related work</p>
+        <h2>More portfolio work</h2>
+        <p>
+          This sample complements my public educational analytics project and broader portfolio of AI evaluation,
+          STEM reasoning, and reproducible data workflows.
+        </p>
       </div>
-      <article class="project-card">
-        <div>
-          <p class="project-status">Prompt</p>
-          <p>A classification model has 95% accuracy on an imbalanced dataset. Is it necessarily a good model? Explain.</p>
-
-          <p class="project-status">Simulated AI-generated response</p>
-          <p>Yes. A 95% accuracy score means the model is correct almost all the time, so it is an excellent classifier.</p>
-
-          <p class="project-status">Reference answer</p>
-          <p>
-            Not necessarily. Accuracy can be misleading on imbalanced datasets. If 95% of the observations belong to one class,
-            a model could reach 95% accuracy by always predicting the majority class while completely failing to identify the minority class.
-            The evaluation should include the class distribution, confusion matrix, precision, recall, F1-score, and a comparison with a baseline model.
-          </p>
-
-          <p class="project-status">Evaluation</p>
-          <ul class="tag-list">
-            <li>Correctness: 2/5</li>
-            <li>Reasoning: 2/5</li>
-            <li>Instruction following: 3/5</li>
-            <li>Clarity: 4/5</li>
-            <li>Final score: 2/5</li>
-          </ul>
-
-          <p class="project-status">Error analysis</p>
-          <p>
-            The response overinterprets accuracy and ignores the dataset imbalance mentioned in the prompt. It does not consider baseline performance
-            or class-specific metrics. The answer is superficially clear but statistically incomplete and potentially misleading.
-          </p>
-
-          <p class="project-status">Severity</p>
-          <p>Moderate to major error. The response may lead to an incorrect evaluation of model performance in a common real-world scenario.</p>
-
-          <p class="project-status">Improved answer</p>
-          <p>
-            A 95% accuracy score does not necessarily mean the model is good. On an imbalanced dataset, accuracy may hide poor performance
-            on the minority class. The model should be evaluated using a confusion matrix, precision, recall, F1-score, and comparison with
-            a simple baseline. If the model only predicts the majority class, it may be ineffective despite its high accuracy.
-          </p>
-        </div>
-      </article>
-    </section>
-
-    <section class="section contact-section">
-      <div class="section-heading">
-        <p class="eyebrow">Professional positioning</p>
-        <h2>Why this matters</h2>
+      <div class="cta-row">
+        <a class="button primary" href="https://alexisfilosofia.github.io/school-enrollment-geospatial-analysis/" target="_blank" rel="noreferrer">Featured project</a>
+        <a class="button secondary" href="index.html">Back to portfolio</a>
       </div>
       <p>
-        AI systems often produce answers that sound plausible but contain mathematical, scientific, or statistical errors.
-        Reliable evaluation requires domain knowledge, attention to reasoning, and the ability to distinguish minor omissions
-        from errors that invalidate a conclusion. These samples illustrate my approach to auditing AI-generated STEM content.
+        You can also review my public code on
+        <a href="https://github.com/alexisfilosofia" target="_blank" rel="noreferrer">GitHub</a>.
       </p>
-      <div class="cta-row">
-        <a class="button primary" href="index.html#contact">Contact</a>
-        <a class="button secondary" href="index.html#projects">Back to projects</a>
-      </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© 2026 Alexis Perissé · AI Response Evaluation Samples</p>
+    <p>© 2026 Alexis Perissé · AI Response Evaluation for STEM Reasoning</p>
   </footer>
 </body>
 </html>
