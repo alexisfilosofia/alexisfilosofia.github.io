@@ -29,13 +29,27 @@ const feedbackText = {
   }
 };
 
+// Feedback should be perceivable without relying only on visual changes.
+document.querySelectorAll('.feedback').forEach(feedback => {
+  feedback.setAttribute('role', 'status');
+  feedback.setAttribute('aria-live', 'polite');
+});
+
 document.querySelectorAll('.question-card').forEach(card => {
   const key = card.dataset.question;
   const feedback = document.getElementById(`feedback-${key}`);
-  card.querySelectorAll('.choice').forEach(button => {
+  const buttons = card.querySelectorAll('.choice');
+
+  buttons.forEach(button => {
+    button.setAttribute('aria-pressed', 'false');
     button.addEventListener('click', () => {
-      card.querySelectorAll('.choice').forEach(b => b.classList.remove('selected'));
+      buttons.forEach(b => {
+        b.classList.remove('selected');
+        b.setAttribute('aria-pressed', 'false');
+      });
       button.classList.add('selected');
+      button.setAttribute('aria-pressed', 'true');
+
       if (feedback && feedbackText[key]) {
         feedback.textContent = feedbackText[key][button.dataset.answer] || '';
         feedback.classList.add('show');
@@ -49,14 +63,26 @@ if (checkRatios) {
   checkRatios.addEventListener('click', () => {
     const inputs = [...document.querySelectorAll('.ratio-input')];
     let correct = 0;
+
     inputs.forEach(input => {
       const raw = input.value.trim().replace(',', '.');
       const value = Number(raw);
       const expected = Number(input.dataset.correct);
-      input.style.borderColor = Math.abs(value - expected) < 0.001 ? '#4d8f22' : '#c44736';
-      input.style.background = Math.abs(value - expected) < 0.001 ? '#eef9df' : '#fff0ec';
-      if (Math.abs(value - expected) < 0.001) correct += 1;
+      const isCorrect = raw !== '' && Number.isFinite(value) && Math.abs(value - expected) < 0.001;
+
+      input.style.borderColor = isCorrect ? '#4d8f22' : '#c44736';
+      input.style.background = isCorrect ? '#eef9df' : '#fff0ec';
+      input.setAttribute('aria-invalid', isCorrect ? 'false' : 'true');
+
+      if (isCorrect) correct += 1;
     });
+
+    // Once the calculation is correct, make the invariant in Ruta A visually explicit.
+    document.querySelectorAll('#ratioTableA .ratio-input').forEach(input => {
+      const value = Number(input.value.trim().replace(',', '.'));
+      input.closest('td')?.classList.toggle('invariant', Math.abs(value - 300) < 0.001);
+    });
+
     const fb = document.getElementById('ratioFeedback');
     fb.classList.add('show');
     if (correct === inputs.length) {
@@ -76,10 +102,13 @@ function updateGraph() {
   if (!slider || !graphLine) return;
   const b = Number(slider.value);
   equationLabel.textContent = `y = 300x + ${b}`;
+  slider.setAttribute('aria-valuetext', `b igual a ${b}`);
+
   const originY = 290 - (b / 600) * 150;
   const endY = Math.max(45, originY - 230);
   graphLine.setAttribute('y1', originY.toFixed(1));
   graphLine.setAttribute('y2', endY.toFixed(1));
+
   sliderFeedback.textContent = b === 0
     ? 'Con b = 0, la recta pasa por el origen y conserva la forma y = kx.'
     : `Con b = ${b}, aparece un valor inicial: cuando x = 0, y = ${b}. La recta ya no pasa por el origen.`;
