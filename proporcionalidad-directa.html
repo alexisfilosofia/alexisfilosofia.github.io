@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>¿Duplicar una cantidad duplica la otra? | Alexis Perissé</title>
+  <meta name="description" content="Secuencia interactiva de Matemática para secundaria sobre proporcionalidad directa, análisis de errores, múltiples representaciones y evaluación formativa." />
+  <link rel="stylesheet" href="educational-content.css" />
+</head>
+<body class="lesson-body">
+  <header class="edu-header">
+    <nav class="edu-nav">
+      <a class="edu-brand" href="educational-content.html">← Portfolio educativo</a>
+      <div class="edu-nav-links">
+        <a href="#problema">Problema</a>
+        <a href="#invariante">Invariante</a>
+        <a href="#formalizamos">Formalizamos</a>
+        <a href="#transferencia">Transferencia</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="lesson-hero">
+    <div class="lesson-hero-inner">
+      <div>
+        <p class="edu-kicker">Matemática · Nivel secundario · Secuencia interactiva</p>
+        <h1>¿Duplicar una cantidad duplica la otra?</h1>
+        <p>Dos cantidades pueden crecer juntas sin ser proporcionales. El desafío es construir un criterio que permita distinguirlas.</p>
+        <div class="edu-actions">
+          <a class="edu-btn primary" href="#problema">Empezar</a>
+          <a class="edu-btn secondary" href="#criterios">Ver ficha del proyecto</a>
+        </div>
+      </div>
+      <div class="route-art" aria-hidden="true">
+        <div class="road"></div>
+        <span class="dot a"></span><span class="dot b"></span>
+        <span class="label a">Ruta A</span><span class="label b">Ruta B</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="progress-bar" aria-hidden="true">
+    <div class="progress-inner"><span class="progress-label">Recorrido</span><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div></div>
+  </div>
+
+  <main class="lesson-wrap">
+    <section id="problema" class="lesson-section">
+      <div class="lesson-step">
+        <div class="step-no">01</div>
+        <div class="step-content">
+          <p class="edu-kicker">Problema inicial</p>
+          <h2>Dos servicios, dos formas de cobrar</h2>
+          <p>Dos empresas de mensajería relacionan el precio de un envío con la distancia recorrida.</p>
+          <table class="data-table">
+            <thead><tr><th>Distancia</th><th class="route-a">Ruta A</th><th class="route-b">Ruta B</th></tr></thead>
+            <tbody>
+              <tr><td>1 km</td><td class="route-a">$300</td><td class="route-b">$700</td></tr>
+              <tr><td>2 km</td><td class="route-a">$600</td><td class="route-b">$900</td></tr>
+              <tr><td>4 km</td><td class="route-a">$1200</td><td class="route-b">$1300</td></tr>
+              <tr><td>8 km</td><td class="route-a">$2400</td><td class="route-b">$2100</td></tr>
+            </tbody>
+          </table>
+          <div class="thought"><strong>Una afirmación:</strong> “En los dos servicios, cuanto mayor es la distancia, mayor es el precio. Los dos deben ser proporcionales.”</div>
+          <div class="question-card" data-question="initial">
+            <div class="question-title">¿Qué podés sostener con la información disponible?</div>
+            <div class="choice-grid">
+              <button class="choice" data-answer="both">Los dos son proporcionales.</button>
+              <button class="choice" data-answer="a">Solo Ruta A parece proporcional.</button>
+              <button class="choice" data-answer="none">Ninguno es proporcional.</button>
+              <button class="choice" data-answer="uncertain">La tabla sola no alcanza para afirmar cómo se comportan para cualquier valor.</button>
+            </div>
+            <div class="feedback" id="feedback-initial"></div>
+          </div>
+          <p><strong>Antes de seguir:</strong> si una relación fuera realmente proporcional, ¿qué esperarías que ocurra con el precio cuando la distancia se duplica?</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="razonamientos" class="lesson-section">
+      <div class="lesson-step">
+        <div class="step-no">02</div>
+        <div class="step-content">
+          <p class="edu-kicker">Compará estrategias</p>
+          <h2>No todos los argumentos tienen el mismo alcance</h2>
+          <div class="formal-grid">
+            <article class="formal-card"><strong>Martina</strong>“Los dos son proporcionales porque el precio siempre aumenta con la distancia.”</article>
+            <article class="formal-card"><strong>Tomás</strong>“En Ruta A, cuando la distancia se duplica, también se duplica el precio.”</article>
+            <article class="formal-card"><strong>Inés</strong>“Compararía el precio con la distancia en varias filas y buscaría algo que se mantenga constante.”</article>
+            <article class="formal-card"><strong>Pregunta</strong>¿Cuál de estas ideas podría convertirse en un criterio general?</article>
+          </div>
+          <div class="question-card" data-question="reasoning">
+            <div class="question-title">Elegí la mejor descripción del razonamiento de Tomás.</div>
+            <div class="choice-grid">
+              <button class="choice" data-answer="wrong">Es irrelevante.</button>
+              <button class="choice" data-answer="partial">Es evidencia relevante, pero limitada.</button>
+              <button class="choice" data-answer="proof">Demuestra proporcionalidad para todos los valores.</button>
+              <button class="choice" data-answer="same">Dice lo mismo que Martina.</button>
+            </div>
+            <div class="feedback" id="feedback-reasoning"></div>
+          </div>
+          <div class="thought"><strong>Información adicional:</strong> Ruta A cobra $300 por cada kilómetro. Ruta B cobra $500 por iniciar el servicio y $200 adicionales por cada kilómetro.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="invariante" class="lesson-section">
+      <div class="lesson-step">
+        <div class="step-no">03</div>
+        <div class="step-content">
+          <p class="edu-kicker">Explorá</p>
+          <h2>Buscá algo que no cambie</h2>
+          <p>Calculá el cociente entre precio total y distancia. Completá los valores y comprobá tu patrón.</p>
+          <table class="data-table" id="ratioTableA">
+            <thead><tr><th>Ruta A</th><th>Precio</th><th>Precio / distancia</th></tr></thead>
+            <tbody>
+              <tr><td>1 km</td><td>$300</td><td><input class="ratio-input" data-correct="300" inputmode="decimal" aria-label="Ruta A, 1 km"></td></tr>
+              <tr><td>2 km</td><td>$600</td><td><input class="ratio-input" data-correct="300" inputmode="decimal" aria-label="Ruta A, 2 km"></td></tr>
+              <tr><td>4 km</td><td>$1200</td><td><input class="ratio-input" data-correct="300" inputmode="decimal" aria-label="Ruta A, 4 km"></td></tr>
+              <tr><td>8 km</td><td>$2400</td><td><input class="ratio-input" data-correct="300" inputmode="decimal" aria-label="Ruta A, 8 km"></td></tr>
+            </tbody>
+          </table>
+          <table class="data-table" id="ratioTableB">
+            <thead><tr><th>Ruta B</th><th>Precio</th><th>Precio / distancia</th></tr></thead>
+            <tbody>
+              <tr><td>1 km</td><td>$700</td><td><input class="ratio-input" data-correct="700" inputmode="decimal" aria-label="Ruta B, 1 km"></td></tr>
+              <tr><td>2 km</td><td>$900</td><td><input class="ratio-input" data-correct="450" inputmode="decimal" aria-label="Ruta B, 2 km"></td></tr>
+              <tr><td>4 km</td><td>$1300</td><td><input class="ratio-input" data-correct="325" inputmode="decimal" aria-label="Ruta B, 4 km"></td></tr>
+              <tr><td>8 km</td><td>$2100</td><td><input class="ratio-input" data-correct="262.5" inputmode="decimal" aria-label="Ruta B, 8 km"></td></tr>
+            </tbody>
+          </table>
+          <button class="check-btn" id="checkRatios">Comprobar cocientes</button>
+          <div class="feedback" id="ratioFeedback"></div>
+          <div class="thought"><strong>Distinción:</strong> en Ruta A, 300 es siempre el mismo precio por kilómetro. En Ruta B, el cociente es el <em>costo medio por kilómetro para ese recorrido</em> y cambia con la distancia.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="representaciones" class="lesson-section">
+      <div class="lesson-step">
+        <div class="step-no">04</div>
+        <div class="step-content">
+          <p class="edu-kicker">Múltiples representaciones</p>
+          <h2>Una recta no siempre significa proporcionalidad</h2>
+          <div class="math-box"><div class="math-main">A(d) = 300d</div><p>Ruta A</p><div class="math-main" style="font-size:clamp(1.9rem,5vw,3.8rem);margin-top:18px">B(d) = 500 + 200d</div><p>Ruta B</p></div>
+          <p>Las dos expresiones generan rectas. La diferencia aparece cuando observamos qué pasa en el origen.</p>
+          <div class="slider-wrap">
+            <label for="bSlider"><strong>Explorá:</strong> mové el término independiente <em>b</em> en <span id="equationLabel">y = 300x + 0</span>.</label>
+            <input id="bSlider" type="range" min="0" max="600" step="50" value="0" />
+            <svg class="graph" id="lineGraph" viewBox="0 0 600 338" role="img" aria-label="Gráfico interactivo de y igual 300 x más b">
+              <line x1="60" y1="290" x2="560" y2="290" stroke="#8d95a8" stroke-width="2"/>
+              <line x1="60" y1="290" x2="60" y2="38" stroke="#8d95a8" stroke-width="2"/>
+              <line id="graphLine" x1="60" y1="290" x2="520" y2="60" stroke="#5b3df5" stroke-width="6" stroke-linecap="round"/>
+              <circle cx="60" cy="290" r="7" fill="#ff6b57"/>
+              <text x="68" y="312" font-size="15" fill="#5e687c">origen</text>
+            </svg>
+            <div class="feedback show" id="sliderFeedback">Con b = 0, la recta pasa por el origen.</div>
+          </div>
+          <p><strong>Pregunta:</strong> ¿qué propiedad de la relación cambia cuando <em>b</em> deja de valer cero?</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="formalizamos" class="lesson-section">
+      <div class="lesson-step">
+        <div class="step-no">05</div>
+        <div class="step-content">
+          <p class="edu-kicker">Formalizamos</p>
+          <h2>Cuatro maneras de reconocer la misma estructura</h2>
+          <div class="math-box"><div class="math-main">y = kx</div><p>Existe una constante <strong>k</strong> que vincula ambas magnitudes.</p></div>
+          <div class="formal-grid">
+            <article class="formal-card"><strong>Relación multiplicativa</strong>Si x se multiplica por un factor, y se multiplica por ese mismo factor.</article>
+            <article class="formal-card"><strong>Razón constante</strong>Para x ≠ 0, el cociente y/x permanece constante.</article>
+            <article class="formal-card"><strong>Expresión algebraica</strong>La relación tiene la forma y = kx.</article>
+            <article class="formal-card"><strong>Gráfico</strong>Los puntos pertenecen a una recta que pasa por el origen.</article>
+          </div>
+          <div class="thought"><strong>En Ruta A:</strong> k = 300 pesos/km. La constante no es un número aislado: relaciona las unidades de las dos magnitudes.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="aplicacion" class="lesson-section">
+      <div class="lesson-step">
+        <div class="step-no">06</div>
+        <div class="step-content">
+          <p class="edu-kicker">Ponelo a prueba</p>
+          <h2>¿Proporcional o solamente creciente?</h2>
+          <div class="question-card" data-question="area">
+            <div class="question-title">El área de un cuadrado cumple A = L². Cuando aumenta L, también aumenta A. ¿Es proporcional?</div>
+            <div class="choice-grid"><button class="choice" data-answer="yes">Sí, porque ambas aumentan.</button><button class="choice" data-answer="no">No. Al duplicar L, el área se multiplica por cuatro.</button></div>
+            <div class="feedback" id="feedback-area"></div>
+          </div>
+          <div class="question-card" data-question="fahrenheit">
+            <div class="question-title">F = 1,8C + 32 es una recta. ¿Existe proporcionalidad directa?</div>
+            <div class="choice-grid"><button class="choice" data-answer="yes">Sí, porque el gráfico es rectilíneo.</button><button class="choice" data-answer="no">No, porque cuando C = 0, F = 32.</button></div>
+            <div class="feedback" id="feedback-fahrenheit"></div>
+          </div>
+          <div class="question-card" data-question="bike">
+            <div class="question-title">Una bicicleta parte del origen a velocidad constante: d = 12t. ¿Qué representa 12?</div>
+            <div class="choice-grid"><button class="choice" data-answer="number">Solo un número de la fórmula.</button><button class="choice" data-answer="rate">Una razón constante: 12 km por hora.</button></div>
+            <div class="feedback" id="feedback-bike"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="errores" class="lesson-section">
+      <div class="lesson-step">
+        <div class="step-no">07</div>
+        <div class="step-content">
+          <p class="edu-kicker">Laboratorio de errores</p>
+          <h2>Llegar a la respuesta correcta no siempre alcanza</h2>
+          <div class="math-box"><div class="math-main">y = 3x</div><div class="math-main" style="margin-top:18px">y = 3x + 10</div></div>
+          <div class="formal-grid">
+            <article class="formal-card"><strong>Respuesta A</strong>“La segunda no es proporcional porque tiene una suma.”</article>
+            <article class="formal-card"><strong>Respuesta B</strong>“La segunda no es proporcional porque cuando x = 0, y = 10.”</article>
+            <article class="formal-card"><strong>Respuesta C</strong>“La segunda no es proporcional porque y/x no permanece constante.”</article>
+            <article class="formal-card"><strong>Desafío</strong>¿Cuál llega a una conclusión correcta pero necesita una justificación más general?</article>
+          </div>
+          <div class="question-card" data-question="errorlab">
+            <div class="question-title">Elegí la mejor evaluación de la Respuesta A.</div>
+            <div class="choice-grid"><button class="choice" data-answer="perfect">Es una justificación general y suficiente.</button><button class="choice" data-answer="weak">La conclusión es correcta, pero “tener una suma” no explica por sí solo la estructura.</button></div>
+            <div class="feedback" id="feedback-errorlab"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="transferencia" class="lesson-section">
+      <div class="lesson-step">
+        <div class="step-no">08</div>
+        <div class="step-content transfer-box">
+          <p class="edu-kicker">Transferencia</p>
+          <h2>Construí y después rompé la proporcionalidad</h2>
+          <table class="data-table"><thead><tr><th>x</th><th>y</th></tr></thead><tbody><tr><td>1</td><td>12</td></tr><tr><td>2</td><td>24</td></tr><tr><td>3</td><td>36</td></tr><tr><td>5</td><td>60</td></tr></tbody></table>
+          <p><strong>1.</strong> Inventá una situación en la que x e y sean magnitudes identificables, exista proporcionalidad y el número 12 tenga significado y unidades.</p>
+          <textarea id="transfer1" placeholder="Escribí tu situación..."></textarea>
+          <p style="margin-top:24px"><strong>2.</strong> Modificá una sola condición para que ambas magnitudes sigan creciendo pero dejen de ser directamente proporcionales.</p>
+          <textarea id="transfer2" placeholder="Modificá la situación y explicá qué propiedad dejó de cumplirse..."></textarea>
+          <div class="selfcheck">
+            <label><input type="checkbox"> Definí qué representa cada magnitud.</label>
+            <label><input type="checkbox"> Expliqué el significado y las unidades de 12.</label>
+            <label><input type="checkbox"> Mi segunda situación sigue creciendo, pero ya no es proporcional.</label>
+            <label><input type="checkbox"> Identifiqué qué propiedad dejó de cumplirse.</label>
+          </div>
+          <div class="thought"><strong>Cierre:</strong> “Si una cantidad aumenta cuando aumenta la otra, entonces son proporcionales.” Reescribí esa afirmación usando ahora un criterio matemáticamente válido, un ejemplo y un contraejemplo.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section id="criterios" class="edu-section project-note">
+    <div class="edu-shell">
+      <div class="edu-heading"><p class="edu-kicker">Ficha de proyecto</p><h2>Qué demuestra esta muestra.</h2><p>Secuencia editorial y digital diseñada para hacer observable el trabajo de contenido, no solo el resultado final.</p></div>
+      <div class="design-decisions">
+        <article class="design-decision"><strong>Destinatario</strong>Primeros años de secundaria.</article>
+        <article class="design-decision"><strong>Objetivo</strong>Reconocer y justificar relaciones directamente proporcionales mediante múltiples representaciones.</article>
+        <article class="design-decision"><strong>Competencias</strong>Diseño didáctico, redacción educativa, feedback diagnóstico, análisis del error, assessment y experiencia digital.</article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="edu-footer"><a href="educational-content.html">← Volver al portfolio educativo</a> · © 2026 Alexis Perissé</footer>
+  <script src="proporcionalidad-directa.js"></script>
+</body>
+</html>
