@@ -1,10 +1,10 @@
 # Alexis Marcelo Perissé
 
-**AI Evaluation · STEM Reasoning · Data Science · Python · Educational and Research Workflows**
+**Data Analysis · Python · Statistics · Data Visualization · Reproducible Workflows**
 
-This repository hosts my public portfolio. It presents selected work in AI response evaluation, technical reasoning, data analysis, educational analytics, geospatial visualization, and reproducible research-oriented workflows.
+This repository hosts my public portfolio. It presents selected work in data cleaning, exploratory and statistical analysis, data quality, dashboards, geospatial visualization, and reproducible reporting. AI evaluation and quantitative modeling appear as complementary technical samples.
 
-My professional orientation is intentionally broad rather than narrowly specialized. I am interested in roles and projects involving AI evaluation, STEM content review, data analysis, technical QA, educational analytics, dashboards, research support, Python-based validation, documentation, and reproducible analytical pipelines.
+My professional focus is data analysis, with opportunities across different sectors. I am interested in remote, freelance, part-time, and project-based work involving data preparation, statistical analysis, quality assurance, dashboards, geospatial analysis, research support, and reproducible analytical pipelines.
 
 ## Portfolio site
 
@@ -18,30 +18,31 @@ The public materials in this portfolio are not a raw data release. They are sani
 
 ## Main areas of work
 
-- AI model evaluation and response assessment
-- Mathematical, physical, statistical, and scientific reasoning review
 - Data cleaning, exploratory data analysis, and reproducible Python workflows
-- Educational analytics and institutional indicators
+- Statistical analysis, data quality, and institutional indicators
 - Historical and archival data processing
 - Geospatial analysis and mapping
 - Dashboarding, reporting, documentation, and technical communication
 
 ## Selected pages and projects
 
-1. **School Enrollment and Geospatial Analysis**  
+1. **School Enrollment and Geospatial Analysis**
    Public methodological pilot connected to my Master's TFI. It transforms historical school enrollment records into aggregate quantitative analysis, geospatial visualization, sanitized notebooks, reusable Python modules, tests, and a GitHub Pages report.
 
-2. **School Enrollment Quantitative Analyzer**  
+2. **School Enrollment Quantitative Analyzer**
    Streamlit app for privacy-safe tabular enrollment analysis: CSV/Excel upload, cleaning, column detection, EDA, age/year/course summaries, cross-tabulations, and exports.
 
-3. **AI Response Evaluation for STEM Reasoning**  
-   Examples of rubric-based evaluation of AI-generated responses in Mathematics, Physics, Data Science, and instruction-following tasks.
+3. **From Spreadsheets to Analytical Evidence**
+   Local case study covering spreadsheet consolidation, schema mapping, category normalization, descriptive statistics, geospatial visualization, and reproducible reporting.
 
-4. **Educational Analytics Dashboard**  
-   General-purpose Streamlit demo for educational data cleaning, validation, filtering, indicators, and exportable reporting.
+4. **Institutional Analytics Dashboard**
+   Streamlit demo for institutional data cleaning, validation, filtering, indicators, and exportable reporting.
 
-5. **Physics and Mathematics Modeling with Python**  
+5. **Physics and Mathematics Modeling with Python**
    Compact computational examples connecting scientific assumptions, quantitative reasoning, and Python-style validation.
+
+6. **AI Response Evaluation for STEM Reasoning**
+   Complementary examples of rubric-based review of AI-generated technical and data reasoning.
 
 ## Technical skills represented
 
